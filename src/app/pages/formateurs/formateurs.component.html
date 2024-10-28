@@ -1,0 +1,51 @@
+
+
+    <!-- Main content -->
+    <div class="main-content" style="margin-left: auto;">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Liste des Formateurs</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Nom</th>
+                                                <th>Biographie</th>
+                                                <th>Expérience (années)</th>
+                                                <th>Spécialité</th>
+                                                <th>Rôle</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let formateur of formateurs">
+                                                <td>{{ formateur.nom }}</td>
+                                                <td>{{ formateur.biographieFormateur }}</td>
+                                                <td>{{ formateur.nbrAnneesExperience }}</td>
+                                                <td>{{ formateur.specialiteFormateur }}</td>
+                                                <td>{{ formateur.role }}</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <i class="mdi mdi-eye mx-2" style="cursor: pointer;" (click)="viewFormateur(formateur.id)"></i>
+                                                        <i class="mdi mdi-pencil mx-2" style="cursor: pointer;" (click)="editFormateur(formateur.id)"></i>
+                                                        <i class="mdi mdi-delete mx-2" style="cursor: pointer;" (click)="deleteFormateur(formateur.id)"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>

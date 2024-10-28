@@ -1,0 +1,45 @@
+<!-- Main content -->
+<div class="main-content" style="margin-left: auto;">
+    <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Liste des Souvenirs</h4>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Description</th>
+                                            <th>Stock</th>
+                                            <th>Prix</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let souvenir of souvenirs">
+                                            <td>{{ souvenir.nom }}</td>
+                                            <td>{{ souvenir.description }}</td>
+                                            <td>{{ souvenir.stock }}</td>
+                                            <td>{{ souvenir.prix | currency }}</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <i class="mdi mdi-eye mx-2" style="cursor: pointer;" (click)="viewSouvenir(souvenir.nom)"></i>
+                                                    <i class="mdi mdi-pencil mx-2" style="cursor: pointer;" (click)="editSouvenir(souvenir.nom)"></i>
+                                                    <i class="mdi mdi-delete mx-2" style="cursor: pointer;" (click)="deleteSouvenir(souvenir.nom)"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<!-- Main content -->
+<div class="main-content" style="margin-left: auto;">
+    <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Liste des Activités Agricoles</h4>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Description</th>
+                                            <th>capacite Accueil</th>
+                                            <th>Localisation</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let activite of activites">
+                                            <td>{{activite.nom}}</td>
+                                            <td>{{activite.description}}</td>
+                                            <td>{{activite.capaciteDAccueil}}</td>
+                                            <td>{{activite.localisation}}</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <i class="mdi mdi-eye mx-2" style="cursor: pointer;"></i>
+                                                    <i class="mdi mdi-pencil mx-2" style="cursor: pointer;"></i>
+                                                    <i class="mdi mdi-delete mx-2" style="cursor: pointer;"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

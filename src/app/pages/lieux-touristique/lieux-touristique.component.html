@@ -1,0 +1,43 @@
+<!-- Main content -->
+<div class="main-content" style="margin-left: auto;">
+    <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Liste des Lieux Touristiques</h4>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Localisation</th>
+                                            <th>Capacité d'Accueil</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let lieu of lieuxTouristiques">
+                                            <td>{{ lieu.nom }}</td>
+                                            <td>{{ lieu.localisation }}</td>
+                                            <td>{{ lieu.capaciteDAccueil }}</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <i class="mdi mdi-eye mx-2" style="cursor: pointer;" (click)="viewLieu(lieu.nom)"></i>
+                                                    <i class="mdi mdi-pencil mx-2" style="cursor: pointer;" (click)="editLieu(lieu.nom)"></i>
+                                                    <i class="mdi mdi-delete mx-2" style="cursor: pointer;" (click)="deleteLieu(lieu.nom)"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
